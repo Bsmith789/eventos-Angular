@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success" (click)="onNewEvento()">Cadastrar novo Evento</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-xs-12">
+        <app-eventos-item
+         *ngFor="let events of eventos, let i = index"
+         [evento] ="events"
+         [index]="i"></app-eventos-item>
+    </div>
+</div>

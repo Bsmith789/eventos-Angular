@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-xs-10">
+        <app-ingressos-edit></app-ingressos-edit>
+        <hr>
+        <ul class="list-group">
+            <a 
+            class="list-group-item" 
+            style="cursor: pointer;"
+            *ngFor="let ingresso of ingressos; let i = index"
+            (click)="onEditItem(i)"
+            >
+                {{ ingresso.name }} ({{ ingresso.quantidade }})
+            </a>
+        </ul>
+    </div>
+</div>
