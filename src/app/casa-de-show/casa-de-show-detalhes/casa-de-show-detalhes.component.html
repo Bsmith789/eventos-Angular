@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-xs-20">
+        <h1>{{ casaShow.name }}</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="btn-group" appDropdown>
+            <button type="button" class="btn btn-primary dropdown-toggle"> Controle de Casa de Show <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a style="cursor: pointer;" (click)="onEditCasaShow()">Editar Casa de Show</a></li>
+                <li><a style="cursor: pointer;" (click)="onDeleteCasaShow()">Deletar Casa de Show</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        {{ casaShow.endereco }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <p></p>
+        {{ casaShow.capacidade }}
+    </div>
+</div>
+

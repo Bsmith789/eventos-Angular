@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+        <form #clienteForm="ngForm" (ngSubmit)="onSubmit(clienteForm)">
+            <div class="form-group">
+                <label for="name">Nome</label>
+                <input type="text" id="name" class="form-control" ngModel name="name" required />
+            </div>
+            <div class="form-group">
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" id="sobrenome" class="form-control" ngModel name="sobrenome" required />
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" class="form-control" ngModel name="email" required email />
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" class="form-control" ngModel name="senha" required minlength="6" />
+            </div>
+            <div>
+                <button class="btn btn-primary" type="submit" [disabled]="!clienteForm.valid">{{ isLoginMode ? 'Login' : 'Cadastrar' }}</button><p></p>         
+                <button class="btn btn-primary" (click)="onSwitchMode()" type="button">{{ isLoginMode ? 'Cadastrar' : 'Ja sou cadastrado'}}</button>
+            </div>
+        </form>
+    </div>
+</div>

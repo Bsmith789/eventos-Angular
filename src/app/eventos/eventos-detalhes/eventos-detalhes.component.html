@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-xs-12">
+        <img 
+        [src]="evento.imagePath" 
+        alt="{{ evento.name }}" 
+        class="img-responsive"
+        style="max-height: 400px;">
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h1>{{ evento.name }}</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="btn-group" appDropdown>
+            <button type="button" class="btn btn-primary dropdown-toggle"> Controle de Evento <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a (click)="onAddToIngressoLista()" style="cursor: pointer;">Adicionar Ingressos</a></li>
+                <li><a style="cursor: pointer;" (click)="onEditEvento()">Editar Evento</a></li>
+                <li><a style="cursor: pointer;" (click)="onDeleteEvento()">Deletar Evento</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        {{ evento.descricao }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <p></p>
+        {{ evento.data }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <ul class="list-group">
+            <p></p>
+            <li
+                class="list-group-item"
+                *ngFor="let ingresso of evento.ingressos">{{ ingresso.name }} -- (Quantidade disponível = {{ ingresso.quantidade }})</li>
+        </ul>
+    </div>
+</div>

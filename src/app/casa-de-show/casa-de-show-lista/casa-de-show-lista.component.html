@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success" (click)="onNewCasaShow()">Cadastrar nova Casa de Show</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-xs-12">
+        <app-casa-de-show-item
+         *ngFor="let house of casaShows, let i = index"
+         [casaShow] ="house"
+         [index]="i"></app-casa-de-show-item>
+    </div>
+</div>
