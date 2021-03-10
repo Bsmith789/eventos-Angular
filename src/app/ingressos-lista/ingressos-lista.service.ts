@@ -1,6 +1,8 @@
 import { Subject } from 'rxjs'
 import { Ingresso } from '../shared/ingressos.model';
+import { Injectable } from "@angular/core";
 
+@Injectable()
 export class IngressoListaService {
     ingressosChanged = new Subject<Ingresso[]>();
     startedEditing = new Subject<number>();
